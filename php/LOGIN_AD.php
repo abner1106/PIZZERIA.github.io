@@ -7,7 +7,7 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 // Incluir el archivo de conexión
-require_once 'CONEXION.php';
+require_once 'conexion.php';
 
 $mensaje = 'hello :)';
 

@@ -11,7 +11,7 @@ $is_test_environment = (defined('PHPUNIT_TEST') && PHPUNIT_TEST === true) ||
     (defined('PREVENT_REDIRECT') && PREVENT_REDIRECT === true);
 
 // Incluir el archivo de conexión
-require_once 'CONEXION.php';
+require_once 'conexion.php';
 
 // Usar la variable PDO de tu conexión
 global $conn;
