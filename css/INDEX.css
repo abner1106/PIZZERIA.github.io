@@ -38,7 +38,7 @@ body {
 
 /* ===== HERO SECTION - ESTILO CARRETERA NOCTURNA ===== */
 .hero {
-    height: 70vh;
+    height: 80vh;
     background:
         linear-gradient(rgba(26, 26, 26, 0.9), rgba(26, 26, 26, 0.7)),
         url('../IMAGES/pizzaF.jpg') center/cover no-repeat;
@@ -130,7 +130,7 @@ body {
 /* ===== ESTILO DEL SLOGAN ===== */
 .slogan {
     font-size: 1.5rem;
-    font-weight: 800;
+    font-weight: 600;
     letter-spacing: 3px;
     margin-top: 8px;
     text-transform: uppercase;

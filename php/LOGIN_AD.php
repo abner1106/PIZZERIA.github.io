@@ -61,9 +61,9 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     <div class="login-container">
         <div class="glass-effect"></div>
         <div class="logo">
-            <h1>Miches</h1>
-            <p>Sabores ancestrales, experiencias modernas</p>
-            <img src="../IMAGES/CERVEZIN.PNG" alt="Logo de la pizzería" class="logo-img" />
+            <h1>Expressway</h1>
+            <p>Sabores decliciosos, Disfruta y Comparte</p>
+            <img src="../images/logoM.PNG" alt="Logo de la pizzería" class="logo-img" />
         </div>
 
         <!-- Formulario de inicio de sesión -->
