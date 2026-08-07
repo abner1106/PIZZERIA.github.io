@@ -4,56 +4,694 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>pizza way</title>
-    <link rel="stylesheet" href="CSS/INDEX.css">
-    <link rel="icon" type="image/png" sizes="64x64" href="images/pizza.ico">
-
+    <title>Versus Pizza | Restaurante Familiar – Sabor y Tradición</title>
+    <meta name="description"
+        content="Versus Pizza, restaurante familiar en Zimatlan de Alvarez Oaxaca. Deliciosas pizzas, hamburguesas, bar y más. Sabor y tradición, café, pizza y más.">
+    <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="images/logo_versus.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Playfair+Display:wght@700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
-    <header class="hero">
-        <div class="hero-content" style="position: relative;">
-            <img src="images/logoM.png" alt="LAS Miches" class="logo" id="cervezin">
-
-
-            <h1>Pizzeria Expressway</h1>
-            <p class="slogan">Pizzaa y mas</p>
-        </div>
+    <header class="header">
+        <nav class="nav contenedor">
+            <a href="#" class="logo">
+                <img src="images/logo_versus.png" alt="Versus Pizza Logo" class="logo-img">
+            </a>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#productos">Productos</a></li>
+                <li><a href="#combos-lunes">Promos</a></li>
+                <li><a href="#juegos">Juegos</a></li>
+                <li><a href="#ubicacion">Ubicación</a></li>
+            </ul>
+            <button class="menu-toggle">☰</button>
+        </nav>
     </header>
 
-    <!-- Access Section -->
-    <section class="access-section">
-        <div class="zapotec-border"></div>
+    <section id="inicio" class="hero">
+        <div class="hero-contenido contenedor">
+            <h1 class="hero-titulo">Versus Pizza<br><span class="hero-sub">Restaurante Familiar</span></h1>
+            <p class="hero-slogan">“Sabor y Tradición” – Café, Pizza y Más</p>
+            <p class="hero-descripcion">Pizzas artesanales, hamburguesas deliciosas, y un excelente ambiente. <br>¡El
+                lugar donde todos quieren estar!</p>
+            <a href="#combos-lunes" class="btn btn-rojo">Ver promos increíbles</a>
+        </div>
+    </section>
 
-        <div class="access-cards">
-            <div class="access-card" onclick="window.location.href='php/login_ad.PHP'">
-                <div class="icon-container">
-                    <img src="images/AMIN.png" alt="Administrador" class="custom-icon">
-                </div>
-                <h2>Administrador</h2>
-                <p>Acceso al sistema de gestión</p>
-                <div class="mezcal-decoration"></div>
-            </div>
+    <!-- GALERÍA DEL LUGAR -->
+    <section id="galeria" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">📸 Conoce Versus Pizza</h2>
+            <p class="descripcion-seccion">Ambiente familiar, juvenil y relajado. ¡Así se vive la experiencia!</p>
+            <div class="galeria-grid">
+                <img src="images/entrada.jpeg" alt="exterior del restaurante" class="galeria-item">
+                <img src="images/mesasDia.jpeg" alt="Zona de mesas" class="galeria-item">
+                <img src="images/pasillo.jpeg" alt="Pasillo de entrada Versus Pizza" class="galeria-item">
+                <img src="images/alasNeonOscuras.jpeg" alt="Alas para tomar fotos" class="galeria-item">
+                <img src="images/Barra.jpeg" alt="Barra del restaurante" class="galeria-item">
 
-            <div class="access-card" onclick="window.location.href='php/login_emp.PHP'">
-                <div class="icon-container">
-                    <img src="images/empleado.png" alt="Empleado" class="custom-icon">
-                </div>
-                <h2>Empleado</h2>
-                <p>Acceso al sistema de ventas</p>
-                <div class="mezcal-decoration"></div>
+
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Pizzeria Expressway - Todos los derechos reservados codemonkey's 951 114 35 41</p>
+    <!-- PRODUCTOS DESTACADOS -->
+    <section id="productos" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🍕 Nuestros Productos Frescos</h2>
+            <p class="descripcion-seccion">Ingredientes de primera, sabor que enamora. ¡Mira lo que tenemos!</p>
+            <div class="productos-grid">
+                <div class="producto-card">
+                    <img src="images/producto1.jpg" alt="Pizza Versus Especial" class="producto-img">
+                    <h3>Pizza Versus Suprema</h3>
+                    <p>Pepperoni, champiñones, pimiento, cebolla y doble queso. La reina de la casa.</p>
+                    <span class="precio">Desde $149</span>
+                </div>
+                <div class="producto-card">
+                    <img src="images/producto2.jpg" alt="Hamburguesa Versus" class="producto-img">
+                    <h3>Hamburguesa BBQ Versus</h3>
+                    <p>Carne angus, queso cheddar, aros de cebolla y salsa BBQ ahumada. ¡Irresistible!</p>
+                    <span class="precio">Desde $129</span>
+                </div>
+                <div class="producto-card">
+                    <img src="images/producto3.jpg" alt="Bebidas Versus" class="producto-img">
+                    <h3>Bebidas Especiales</h3>
+                    <p>Refrescos, malteadas, frappés y más. ¡La mejor variedad para acompañar!</p>
+                    <span class="precio">Desde $40</span>
+                </div>
+            </div>
+        </div>
+    </section>
 
+    <!-- COMBOS LUNES 1 -->
+    <section id="combos-lunes" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos del Lunes</h2>
+            <p class="descripcion-seccion">Los favoritos de la casa al mejor precio. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/comboLunes1.jpeg" alt="Promos del Lunes" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos del Lunes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍜 2 Maruchan predaradas + Refresco 355 ml</p>
+                        <span class="precio">$80 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Sodas Italianas</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍹 2 Azulitos con Alcohol</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Orden de Nuggets + Papas a la Francesa + Boing</p>
+                        <span class="precio">$120 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Frappé Oreo</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS LUNES 2 -->
+    <section id="combos-lunes2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Lunes 2</h2>
+            <p class="descripcion-seccion">Promociones especiales para comenzar la semana con todo el sabor. ¡Aprovecha!
+            </p>
+
+            <div class="combo-card">
+                <img src="images/comboLunes2.jpeg" alt="Promos del Lunes 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Lunes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa Arrachera + Papas a la Francesa + Refresco 355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Skimos</p>
+                        <span class="precio">$40 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌶️ 3 Banderillas + Flaming Hot</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 Pizza Familiar de 1 Especialidad + Papas a la Francesa</p>
+                        <span class="precio">$245 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS MARTES -->
+    <section id="combos-martes" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Martes</h2>
+            <p class="descripcion-seccion">Promociones especiales para darle sabor al martes. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/comboMartes.jpeg" alt="Promos del Martes" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Martes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Combo Altas: Orden de Altas + Orden de papas gajos + 2 Refrescos
+                            355ml</p>
+                        <span class="precio">$170 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍹 El Doble de Sabor: Manzana verde, uva, mango (2x)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa BBQ con Papas</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS MARTES 2 -->
+    <section id="combos-martes2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Martes 2</h2>
+            <p class="descripcion-seccion">Promociones especiales para darle sabor al martes. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/comboMartes2.jpeg" alt="Promos del Martes 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Martes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 Pizza Individual Hawaiana + Papas a la francesa + Refresco 355ml
+                        </p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 2 Hamburguesas de Res + Papas a la francesa</p>
+                        <span class="precio">$125 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍦 2 Frappés (Paleta Payaso o Bubulubu)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍹 2 Mojitos</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS MIÉRCOLES -->
+    <section id="combos-miercoles" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Miércoles</h2>
+            <p class="descripcion-seccion">Promociones especiales para disfrutar el miércoles. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/comboMiercoles.jpeg" alt="Combos del Miércoles" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Miércoles</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌭 4 Hot Dogs Sencillos + 1 Refresco de 355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Combo Amigos: 1 Orden de alitas + 1 Orden de papas locas + 1
+                            Orden de nachos sencillos + 1 Orden de dedos de queso + 1 Orden de nuggets</p>
+                        <span class="precio">$299 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Eskimos</p>
+                        <span class="precio">$40 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Sodas Italianas</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS MIÉRCOLES 2 -->
+    <section id="combos-miercoles2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Miércoles 2</h2>
+            <p class="descripcion-seccion">Más promociones especiales para disfrutar el miércoles. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/comboMiercoles2.jpeg" alt="Combos del Miércoles 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Miércoles</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 2 Hamburguesas de Res + 1 Refresco de 355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 2 Pizzas Medianas (1 especialidad cada una) + Papas a la
+                            francesa</p>
+                        <span class="precio">$325 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Frappé Oreo</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS JUEVES -->
+    <section id="combos-jueves" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Jueves</h2>
+            <p class="descripcion-seccion">Promociones especiales para disfrutar el jueves. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/comboJueves.jpeg" alt="Combos del Jueves" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Jueves</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍹 El Doble de Sabor: Manzana verde, uva, mango (2x)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 2 Hamburguesas de Res + 1 Refresco de 355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌶️ 3 Banderillas Flamin'Hot</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS JUEVES 2 -->
+    <section id="combos-jueves2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Jueves 2</h2>
+            <p class="descripcion-seccion">Más promociones especiales para disfrutar el jueves. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/comboJueves2.jpeg" alt="Combos del Jueves 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Jueves</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌮 Combo Junior: Sincronizada + Boing</p>
+                        <span class="precio">$50 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 2 Pizzas Grandes (1 especialidad cada una) + Papas a la francesa
+                        </p>
+                        <span class="precio">$385 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍦 2 Frappés (Paleta Payaso o Bubulubu)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">☕ 2 Tisanas Calientes</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa Especial + Boing de guayaba</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS VIERNES -->
+    <section id="combos-viernes" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Viernes</h2>
+            <p class="descripcion-seccion">Promociones especiales para disfrutar el viernes. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/comboViernes.jpeg" alt="Combos del Viernes" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Viernes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Combo Alitas: Orden de Alitas + Orden de papas gajo + 2
+                            Refrescos
+                            355ml</p>
+                        <span class="precio">$170 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Combo Amigos: 1 Orden de alitas + 1 Orden de papas locas + 1
+                            Orden de nachos sencillos + 1 Orden de dedos de queso + 1 Orden de nuggets</p>
+                        <span class="precio">$299 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 Pizza Familiar + Papas a la francesa</p>
+                        <span class="precio">$245 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS VIERNES 2 -->
+    <section id="combos-viernes2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Viernes 2</h2>
+            <p class="descripcion-seccion">Más promociones especiales para disfrutar el viernes. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/comboViernes2.jpeg" alt="Combos del Viernes 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Viernes</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🥤 2 Skimos</p>
+                        <span class="precio">$40 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌭 4 Hot Dogs Sencillos + 1 Refresco de 355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍺 2 Micheladas de Sabor</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa BBQ con Papas</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS SÁBADO -->
+    <section id="combos-sabado" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Sábado</h2>
+            <p class="descripcion-seccion">Promociones especiales para disfrutar el sábado. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/combosabado.jpeg" alt="Combos del Sábado" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Sábado</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">☕ 2 Cafés Capuchino (Clásicos, vainilla o moka)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍹 2 Azulitos con Alcohol</p>
+                        <span class="precio">$120 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 2 Hamburguesas de Res + Papas a la francesa</p>
+                        <span class="precio">$125 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS SÁBADO 2 -->
+    <section id="combos-sabado2" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Sábado 2</h2>
+            <p class="descripcion-seccion">Más promociones especiales para disfrutar el sábado. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/combosabado2.jpeg" alt="Combos del Sábado 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Sábado</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍜 2 Maruchan Preparadas + Refresco de 355ml</p>
+                        <span class="precio">$80 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🌮 Combo Junior: Sincronizada + Boing</p>
+                        <span class="precio">$50 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 2 Pizzas Grandes (1 especialidad cada una) + Papas a la francesa
+                        </p>
+                        <span class="precio">$385 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- COMBOS DOMINGO -->
+    <section id="combos-domingo" class="seccion">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Domingo</h2>
+            <p class="descripcion-seccion">Promociones especiales para disfrutar el domingo. ¡No te las pierdas!</p>
+
+            <div class="combo-card">
+                <img src="images/combodomingo.jpeg" alt="Combos del Domingo" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Domingo</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa de Res + Café Capuchino Moka</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍗 Combo Amigos: 1 Orden de alitas + 1 Orden de papas locas + 1
+                            Orden de nachos sencillos + 1 Orden de dedos de queso + 1 Orden de nuggets</p>
+                        <span class="precio">$299 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍺 2 Micheladas de Sabor</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- COMBOS DOMINGO 3 -->
+    <section id="combos-domingo3" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Promos Domingo 2</h2>
+            <p class="descripcion-seccion">Más promociones especiales para disfrutar el domingo. ¡Aprovecha!</p>
+
+            <div class="combo-card">
+                <img src="images/combodomingo2.jpeg" alt="Combos del Domingo 2" class="combo-img">
+                <div class="combo-info">
+                    <h3>🎯 Promos Domingo</h3>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">☕ 2 Cafés Capuchino (Clásicos, vainilla o moka)</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍕 2 Pizzas Familiares (1 especialidad cada una) + Papas a la
+                            francesa</p>
+                        <span class="precio">$465 MXN</span>
+                    </div>
+
+                    <div class="combo-item">
+                        <p class="combo-descripcion">🍔 Hamburguesa de Arrachera + Papas a la francesa + Refresco de
+                            355ml</p>
+                        <span class="precio">$100 MXN</span>
+                    </div>
+
+                    <button class="btn btn-oscuro btn-whatsapp">
+                        <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp">
+                        ¡Ordena ahora!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- JUEGOS -->
+    <section id="juegos" class="seccion seccion-oscura">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🎮 Zona de Juegos</h2>
+            <p class="descripcion-seccion">Diversión para todas las edades mientras esperas tu comida.</p>
+            <div class="juegos-lista">
+                <div class="juego-item">
+                    <span class="icono-juego">🎱</span>
+                    <p>Billar profesional</p>
+                </div>
+                <div class="juego-item">
+                    <span class="icono-juego">🕹️</span>
+                    <p>Maquinitas arcade</p>
+                </div>
+                <div class="juego-item">
+                    <span class="icono-juego">⚽</span>
+                    <p>Futbolito</p>
+                </div>
+                <div class="juego-item">
+                    <span class="icono-juego">🎯</span>
+                    <p>Dardos</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UBICACIÓN -->
+    <section id="ubicacion" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">📍 Encuéntranos</h2>
+            <p class="descripcion-seccion">Estamos en el corazón de Zimatalan de Alvarez Calle Hidalgo #22. ¡Te
+                esperamos!</p>
+            <div class="mapa-contenedor">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7636.128860303649!2d-96.78677845900408!3d16.872707035717145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85c715aa4783750d%3A0xc9e84205bc31ea3!2sVs%20Pizzas%20%22Versus%20Pizza%22!5e0!3m2!1ses-419!2smx!4v1786056256534!5m2!1ses-419!2smx"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="contenedor footer-contenido">
+            <div class="footer-info">
+                <img src="images/logo_versus.png" alt="Logo" class="footer-logo">
+                <p>Vs Pizza “Versus Pizza”<br>Restaurante Familiar</p>
+                <p>📞 55 1234 5678</p>
+                <p>📧 contacto@versuspizza.com</p>
+                <p>🕒 Lun–Dom: 15:00 – 23:00</p>
+            </div>
+            <div class="footer-slogan">
+                <p><em>“Sabor y Tradición” – Café, Pizza y Más</em></p>
+                <a href="#combos-lunes" class="btn btn-rojo">Ordene ahora</a>
+            </div>
+        </div>
+        <p class="copy">© 2026 Versus Pizza – Todos los derechos reservados.</p>
     </footer>
-</body>
-<script src="js/ANIMATION.JS"></script>
-<script src="js/JAVA_INDEX.js"></script>
 
+    <a href="https://wa.me/529511620311?text=Hola%2C%20quisiera%20hacer%20un%20pedido." target="_blank"
+        rel="noopener noreferrer" class="whatsapp-float" aria-label="Contactar por WhatsApp">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M20.52 3.48A11.93 11.93 0 0 0 12.01 0C5.43 0 0.09 5.34 0.09 11.91c0 2.1.55 4.15 1.6 5.95L0 24l6.34-1.66a11.9 11.9 0 0 0 5.67 1.36h.01c6.58 0 11.92-5.34 11.92-11.91 0-3.18-1.24-6.17-3.5-8.43ZM12.01 21.8h-.01c-1.82 0-3.6-.49-5.15-1.42l-.37-.22-3.76.98 1-3.66-.24-.38A9.92 9.92 0 0 1 2.09 11.91c0-5.5 4.47-9.97 9.92-9.97a9.95 9.95 0 0 1 7.07 3.03 9.93 9.93 0 0 1 2.93 7.02c0 5.5-4.47 9.97-9.92 9.97Zm5.46-7.47c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.66.15-.2.3-.77.97-.95 1.17-.17.2-.35.22-.65.08-.3-.15-1.28-.47-2.44-1.5-.9-.8-1.51-1.8-1.69-2.1-.18-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.29.3-.49.1-.2.05-.38-.02-.53-.08-.15-.66-1.6-.91-2.19-.24-.58-.48-.5-.66-.51-.17-.01-.37-.01-.57-.01-.2 0-.52.07-.79.35-.27.28-1.03 1.01-1.03 2.46 0 1.45 1.05 2.86 1.2 3.06.15.2 2.07 3.16 5.02 4.43.7.3 1.25.48 1.68.61.71.23 1.35.2 1.86.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.18-1.42-.07-.12-.27-.2-.57-.35Z"
+                fill="#fff" />
+        </svg>
+    </a>
+    <script src="index.js"></script>
+</body>
 
 </html>

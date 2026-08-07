@@ -1,0 +1,621 @@
+/* === RESET & BASE === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #1a1614;
+    color: #f0ebe3;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.contenedor {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.seccion {
+    padding: 90px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.seccion-clara {
+    background: #25201b;
+    color: #f0ebe3;
+}
+
+.seccion-oscura {
+    background: #14110f;
+    color: #d3b89d;
+}
+
+.titulo-seccion {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #f3c26b;
+    text-align: center;
+    margin-bottom: 10px;
+    text-shadow: 0 0 15px rgba(243, 194, 107, 0.2);
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.seccion-oscura .titulo-seccion {
+    color: #e2ae5a;
+}
+
+.descripcion-seccion {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto 50px;
+    font-size: 1.1rem;
+    color: #b8a89a;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s ease 0.2s forwards;
+}
+
+/* === HEADER === */
+.header {
+    background: rgba(20, 17, 15, 0.95);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(243, 194, 107, 0.2);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo-img {
+    height: 110px;
+    transition: transform 0.4s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.05) rotate(-2deg);
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #f0ebe3;
+    text-decoration: none;
+    font-weight: 600;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -5px;
+    left: 0;
+    background: #f3c26b;
+    transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #f3c26b;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: #f3c26b;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/* === HERO === */
+.hero {
+    background: linear-gradient(rgba(20, 17, 15, 0.7), rgba(20, 17, 15, 0.3)), url('images/cafe.jpg') center/cover no-repeat fixed;
+    padding: 160px 20px 120px;
+    text-align: center;
+    color: #fff;
+}
+
+.hero-titulo {
+    font-family: 'Playfair Display', serif;
+    font-size: 4rem;
+    margin-bottom: 10px;
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero-sub {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2rem;
+    color: #f3c26b;
+}
+
+.hero-slogan {
+    font-size: 1.6rem;
+    font-style: italic;
+    margin: 20px 0;
+}
+
+.hero-descripcion {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    color: #d3c9c1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 16px 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    border-radius: 50px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn-rojo {
+    background: #b7532e;
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(183, 83, 46, 0.4);
+}
+
+.btn-rojo:hover {
+    background: #944425;
+    transform: translateY(-5px);
+}
+
+.btn-oscuro {
+    background: #36302b;
+    color: #f3c26b;
+    border: 1px solid #f3c26b;
+}
+
+.btn-oscuro:hover {
+    background: #f3c26b;
+    color: #1a1614;
+    transform: translateY(-3px);
+}
+
+/* === COMBO CARD === */
+.combo-card {
+    display: flex;
+    flex-wrap: wrap;
+    background: #2a2420;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+    margin: 0 auto 60px;
+    max-width: 950px;
+    border: 1px solid rgba(243, 194, 107, 0.15);
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.combo-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+}
+
+.combo-img {
+    width: 100%;
+    max-width: 380px;
+    min-height: 300px;
+    /* Altura mínima para que no se aplaste */
+    object-fit: cover;
+    flex-shrink: 0;
+    /* Evita que la imagen se encoja */
+    transition: transform 0.6s ease;
+}
+
+.combo-card:hover .combo-img {
+    transform: scale(1.03);
+}
+
+.combo-info {
+    padding: 40px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.combo-info h3 {
+    font-size: 2rem;
+    color: #f3c26b;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.combo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed rgba(243, 194, 107, 0.2);
+    transition: all 0.3s ease;
+}
+
+.combo-item:last-of-type {
+    border-bottom: none;
+}
+
+.combo-item:hover {
+    padding-left: 10px;
+    background: rgba(243, 194, 107, 0.05);
+    border-radius: 5px;
+}
+
+.combo-item .combo-descripcion {
+    margin: 0;
+    font-size: 1rem;
+    flex: 1;
+    color: #d3c9c1;
+    font-weight: 500;
+}
+
+.combo-item .precio {
+    font-weight: 700;
+    color: #f3c26b;
+    font-size: 1.2rem;
+    margin-left: 15px;
+    white-space: nowrap;
+}
+
+.combo-info .btn {
+    margin-top: 30px;
+    align-self: flex-start;
+}
+
+/* === PRODUCTOS GRID === */
+.productos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.producto-card {
+    background: #2a2420;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.producto-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.producto-img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.producto-card:hover .producto-img {
+    transform: scale(1.1);
+}
+
+.producto-card h3 {
+    font-size: 1.6rem;
+    margin: 20px 0 10px;
+    color: #f3c26b;
+}
+
+.producto-card p {
+    padding: 0 20px;
+    color: #b8a89a;
+}
+
+.producto-card .precio {
+    display: inline-block;
+    font-weight: 700;
+    color: #f3c26b;
+    font-size: 1.3rem;
+    margin: 15px 0 25px;
+    padding: 5px 15px;
+    border: 1px solid rgba(243, 194, 107, 0.3);
+    border-radius: 20px;
+}
+
+/* === GALERÍA === */
+.galeria-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.galeria-item {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    transition: transform 0.5s ease, box-shadow 0.5s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.galeria-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* === JUEGOS === */
+.juegos-lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+    margin-top: 30px;
+}
+
+.juego-item {
+    text-align: center;
+    font-size: 1.2rem;
+    transition: transform 0.4s ease;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 15px;
+    min-width: 120px;
+}
+
+.juego-item:hover {
+    transform: translateY(-15px);
+    background: rgba(243, 194, 107, 0.1);
+}
+
+.icono-juego {
+    font-size: 3.5rem;
+    display: block;
+    margin-bottom: 15px;
+}
+
+/* === MAPA === */
+.mapa-contenedor {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border: 2px solid rgba(243, 194, 107, 0.1);
+}
+
+/* === WHATSAPP FLOAT === */
+.whatsapp-float {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    width: 64px;
+    height: 64px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.35);
+    z-index: 2000;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+    box-shadow: 0 12px 30px rgba(37, 211, 102, 0.45);
+}
+
+.whatsapp-float svg {
+    width: 32px;
+    height: 32px;
+}
+
+/* === BOTONES WHATSAPP === */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.icono-whatsapp {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+/* === FOOTER === */
+.footer {
+    background: #14110f;
+    color: #b8a89a;
+    padding: 60px 20px 30px;
+    border-top: 1px solid rgba(243, 194, 107, 0.1);
+}
+
+.footer-contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.footer-logo {
+    height: 90px;
+    margin-bottom: 15px;
+}
+
+.footer-slogan {
+    text-align: right;
+}
+
+.copy {
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding-top: 25px;
+    font-size: 0.9rem;
+    color: #777;
+}
+
+/* === ANIMACIONES === */
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === RESPONSIVE MEJORADO (MÓVILES Y TABLETS) === */
+
+/* Tablets y móviles grandes (menos de 992px) */
+@media (max-width: 992px) {
+    .combo-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .combo-item .precio {
+        margin-left: 0;
+        margin-top: 2px;
+        font-size: 1.1rem;
+    }
+
+    .combo-info .btn {
+        align-self: stretch;
+        /* Botón ocupa todo el ancho en tablets */
+        text-align: center;
+    }
+}
+
+/* Móviles (menos de 768px) */
+@media (max-width: 768px) {
+
+    /* Ajuste del menú */
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background: rgba(20, 17, 15, 0.98);
+        position: absolute;
+        top: 80px;
+        left: 0;
+        width: 100%;
+        padding: 30px;
+        gap: 20px;
+        backdrop-filter: blur(10px);
+        border-bottom: 2px solid #f3c26b;
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: fadeUp 0.5s ease forwards;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .logo-img {
+        height: 90px;
+    }
+
+    /* Hero textos más pequeños */
+    .hero-titulo {
+        font-size: 2.8rem;
+    }
+
+    .hero-sub {
+        font-size: 1.6rem;
+    }
+
+    .hero-slogan {
+        font-size: 1.2rem;
+    }
+
+    /* CORRECCIÓN DE IMÁGENES DE PROMOS EN MÓVIL */
+    .combo-card {
+        flex-direction: column;
+        /* Asegura que sea columna */
+        margin: 0 0 40px 0;
+        /* Menos margen para que no se salga */
+        border-radius: 15px;
+    }
+
+    .combo-img {
+        max-width: 100%;
+        /* Ocupa todo el ancho del contenedor */
+        min-height: 200px;
+        /* Altura mínima para que no se aplaste */
+        height: auto;
+        /* Mantiene la proporción automática */
+        object-fit: cover;
+        flex-shrink: 0;
+    }
+
+    .combo-info {
+        padding: 25px 20px;
+    }
+
+    .combo-info h3 {
+        font-size: 1.6rem;
+    }
+
+    .combo-item .combo-descripcion {
+        font-size: 0.95rem;
+    }
+
+    .combo-item .precio {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
+
+    .combo-info .btn {
+        width: 100%;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    /* Footer */
+    .footer-contenido {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-slogan {
+        text-align: center;
+        margin-top: 20px;
+    }
+}
+
+/* Móviles muy pequeños (menos de 400px) */
+@media (max-width: 400px) {
+    .combo-img {
+        min-height: 150px;
+        /* Reduce un poco la altura en pantallas muy chicas */
+    }
+}
