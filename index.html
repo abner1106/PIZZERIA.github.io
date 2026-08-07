@@ -25,7 +25,7 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#galeria">Galería</a></li>
                 <li><a href="#productos">Productos</a></li>
-                <li><a href="#combos-lunes">Promos</a></li>
+                <li><a href="#promos">Promos</a></li>
                 <li><a href="#juegos">Juegos</a></li>
                 <li><a href="#ubicacion">Ubicación</a></li>
             </ul>
@@ -35,26 +35,43 @@
 
     <section id="inicio" class="hero">
         <div class="hero-contenido contenedor">
+            <img src="images/logo_versus.png" alt="Versus Pizza Logo" class="logo-img">
             <h1 class="hero-titulo">Versus Pizza<br><span class="hero-sub">Restaurante Familiar</span></h1>
             <p class="hero-slogan">“Sabor y Tradición” – Café, Pizza y Más</p>
             <p class="hero-descripcion">Pizzas artesanales, hamburguesas deliciosas, y un excelente ambiente. <br>¡El
                 lugar donde todos quieren estar!</p>
-            <a href="#combos-lunes" class="btn btn-rojo">Ver promos increíbles</a>
         </div>
     </section>
 
     <!-- GALERÍA DEL LUGAR -->
     <section id="galeria" class="seccion">
         <div class="contenedor">
-            <h2 class="titulo-seccion">📸 Conoce Versus Pizza</h2>
+            <div class="titulo-con-ico">
+                <img src="images/MASCOTA.PNG" alt="Mascota Versus" class="titulo-ico">
+                <h2 class="titulo-seccion">📸 Conoce Versus Pizza</h2>
+            </div>
             <p class="descripcion-seccion">Ambiente familiar, juvenil y relajado. ¡Así se vive la experiencia!</p>
+            <!-- Información de ubicación y horario dentro de la galería -->
+            <div class="info-ubicacion">
+                <div class="ubicacion-card">
+                    <h3>Ubicación</h3>
+                    <p>Estamos ubicados en: <strong>Calle Hidalgo No. 24, esquina con Guadalupe Victoria, barrio San
+                            Lorenzo</strong></p>
+                    <p>¡Te esperamos!</p>
+                </div>
+
+                <div class="ubicacion-card">
+                    <h3>Horario</h3>
+                    <p><strong>Lunes - Domingo:</strong> 15:00 - 23:00</p>
+                </div>
+            </div>
             <div class="galeria-grid">
                 <img src="images/entrada.jpeg" alt="exterior del restaurante" class="galeria-item">
                 <img src="images/mesasDia.jpeg" alt="Zona de mesas" class="galeria-item">
                 <img src="images/pasillo.jpeg" alt="Pasillo de entrada Versus Pizza" class="galeria-item">
                 <img src="images/alasNeonOscuras.jpeg" alt="Alas para tomar fotos" class="galeria-item">
                 <img src="images/Barra.jpeg" alt="Barra del restaurante" class="galeria-item">
-
+                <img src="images/logoNoche.jpeg" alt="ambiente nocturno" class="galeria-item">
 
             </div>
         </div>
@@ -67,33 +84,208 @@
             <p class="descripcion-seccion">Ingredientes de primera, sabor que enamora. ¡Mira lo que tenemos!</p>
             <div class="productos-grid">
                 <div class="producto-card">
-                    <img src="images/producto1.jpg" alt="Pizza Versus Especial" class="producto-img">
-                    <h3>Pizza Versus Suprema</h3>
-                    <p>Pepperoni, champiñones, pimiento, cebolla y doble queso. La reina de la casa.</p>
-                    <span class="precio">Desde $149</span>
+                    <img src="images/burritos.jpeg" alt="Burritos Versus" class="producto-img">
+                    <h3>Burritos</h3>
+                    <p>los mejores burritos de todo zimatlan </p>
+                    <span class="precio"></span>
                 </div>
                 <div class="producto-card">
-                    <img src="images/producto2.jpg" alt="Hamburguesa Versus" class="producto-img">
-                    <h3>Hamburguesa BBQ Versus</h3>
-                    <p>Carne angus, queso cheddar, aros de cebolla y salsa BBQ ahumada. ¡Irresistible!</p>
-                    <span class="precio">Desde $129</span>
+                    <img src="images/Hotckaes.jpeg" alt="Hamburguesa Versus" class="producto-img">
+                    <h3>hotcakes esponjosos y deliciosos</h3>
+                    <p>deliciosos hotcakes con frutas fresa platano moras crema</p>
+                    <span class="precio"></span>
                 </div>
                 <div class="producto-card">
-                    <img src="images/producto3.jpg" alt="Bebidas Versus" class="producto-img">
-                    <h3>Bebidas Especiales</h3>
-                    <p>Refrescos, malteadas, frappés y más. ¡La mejor variedad para acompañar!</p>
-                    <span class="precio">Desde $40</span>
+                    <img src="images/crepa.jpeg" alt="Deliciosas Crepas" class="producto-img">
+                    <h3>Deliciosas Crepas</h3>
+                    <p>¡Rellenas de mermelada, crema y deliciosa fruta!</p>
+                    <span class="precio"></span>
+                </div>
+
+                <div class="producto-card">
+                    <img src="images/pizza.jpeg" alt="Deliciosas Crepas" class="producto-img">
+                    <h3>La especialidad de la casa deliciosa pizza</h3>
+                    <p>esponjosas delicosas con mucho sabor</p>
+                    <span class="precio"></span>
                 </div>
             </div>
         </div>
     </section>
 
+
+
+    <!-- NOSOTROS / PROMOCIÓN PIZZAS -->
+    <section id="nosotros" class="seccion seccion-oscura">
+        <div class="contenedor nosotros-grid">
+            <div class="nosotros-text">
+                <h2 class="titulo-seccion">🍕 ¿Por qué elegir Versus Pizza?</h2>
+                <p class="descripcion-seccion">En Versus Pizza las pizzas son el corazón de la casa: masa artesanal,
+                    ingredientes frescos y combinaciones únicas que nos distinguen. Aquí no vendemos solo comida,
+                    vendemos experiencias memorables para compartir.</p>
+
+
+                <ul class="beneficios-list">
+                    <li><strong>Pizzas artesanales:</strong> masa hecha en casa y toppings de primera calidad.</li>
+                    <li><strong>Bebidas destacadas:</strong> micheladas y drinks para acompañar tu comida.</li>
+                    <li><strong>Promos y combos:</strong> perfectos para grupos y reuniones.</li>
+                </ul>
+
+                <!-- Desglose detallado con espacio para 1-2 fotos por punto (reemplaza las imágenes por las tuyas) -->
+                <div class="nosotros-breakdown">
+                    <div class="break-item">
+                        <h4>Pizzas artesanales</h4>
+                        <p>Nuestra masa se fermenta lentamente para obtener una corteza crujiente por fuera y esponjosa
+                            por dentro. Usamos salsa casera y quesos seleccionados; ofrecemos especialidades únicas y la
+                            opción de personalizar tu pizza al momento.</p>
+                        <div class="mini-galeria">
+                            <img src="images/pizza2.jpg" alt="Pizza artesanal 1" class="galeria-item mini">
+                        </div>
+                    </div>
+
+                    <div class="break-item">
+                        <h4>Envíos a domicilio</h4>
+                        <p>Contamos con servicio de entregas a domicilio para que disfrutes nuestras pizzas en casa. Haz
+                            tu pedido por WhatsApp o llamando a nuestros números.</p>
+                        <div class="mini-galeria envio">
+                            <img src="images/repartidor.png" alt="Envíos a domicilio"
+                                class="galeria-item mini envio-img">
+                        </div>
+                    </div>
+
+                    <div class="break-item">
+                        <h4>Bebidas destacadas</h4>
+                        <p>🍕+🍹 = ¡El plan perfecto en Versus Pizza!Ven por tus pizzas favoritas y combínalas con
+                            micheladas al momento, azulitos refrescantes o mezcalinas deliciosas. ¡Ambiente al 100% para
+                            todos ! 🎯</p>
+                        <div class="mini-galeria">
+                            <img src="images/MICHE_CUBANA_GRANDE.png" alt="Michelada 1" class="galeria-item mini">
+                            <img src="images/AZULITO_FROST-removebg-preview.png" alt="Coctel 1"
+                                class="galeria-item mini">
+                        </div>
+                    </div>
+
+                    <div class="break-item">
+                        <h4>Disfruta de tus cervezas favoritas</h4>
+                        <p>🍕+🍺 = ¡El plan perfecto en Versus Pizza! Contamos con una selección de cervezas nacionales
+                            e importadas, chelas bien frías y micheladas por si las prefieres. Acompáñalas con nuestras
+                            pizzas y vive el mejor ambiente con familia y amigos.</p>
+                        <div class="mini-galeria cervezas-grid">
+                            <img src="images/CORONA_MEDIA.png" alt="Cerveza Corona" class="galeria-item mini">
+                            <img src="images/CERVEZIN.png" alt="Cerveza mascota" class="galeria-item mini cervezin">
+                            <img src="images/VICTORIA_MEDIA.png" alt="Cerveza Victoria" class="galeria-item mini">
+                        </div>
+                    </div>
+
+                    <div class="break-item">
+                        <h4>Promos y combos</h4>
+                        <p>Ofrecemos packs para compartir, combos económicos y promociones de partido para que tu
+                            reunión sea más fácil y sabrosa. Pregunta por nuestras promociones del día.</p>
+                        <div class="mini-galeria">
+                            <img src="images/promoDorilocos.jpeg" alt="Promo 1" class="galeria-item mini">
+                            <img src="images/promoSemanalMiercolesJueves.jpeg" alt="Promo 2" class="galeria-item mini">
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        <div class="contenedor mvv-grid">
+            <div class="mvv-card">
+                <h3>Misión</h3>
+                <p>Ofrecer las mejores pizzas y un espacio donde familias y amigos se reúnan, creando momentos llenos de
+                    sabor y buena vibra.</p>
+            </div>
+            <div class="mvv-card">
+                <h3>Visión</h3>
+                <p>Ser el punto de encuentro favorito de Zimatlán: reconocidos por nuestra pizza, servicio y ambiente
+                    para eventos deportivos y reuniones.</p>
+            </div>
+            <div class="mvv-card">
+                <h3>Valores</h3>
+                <p>Calidad, cercanía, autenticidad y respeto: ingredientes que cuidamos en cada receta y en cada trato
+                    con nuestros clientes.</p>
+            </div>
+        </div>
+
+        <div class="contenedor quienes-somos">
+            <h3>¿Quiénes somos?</h3>
+            <p>Somos un equipo local apasionado por la pizza y la hospitalidad: cocineros, bartenders y anfitriones que
+                trabajan para que cada visita sea especial. Celebramos la comunidad y la buena comida.</p>
+        </div>
+    </section>
+
+    <!-- PIZZAS DESTACADAS -->
+    <section id="pizzas" class="seccion seccion-clara">
+        <div class="contenedor">
+            <h2 class="titulo-seccion">🔥 Pizzas Estrella</h2>
+            <p class="descripcion-seccion">Nuestras especialidades: recetas creadas para compartir. Elige tu favorita o
+                prueba una de nuestras combinaciones exclusivas.</p>
+
+            <div class="pizzas-grid">
+                <article class="pizza-card">
+                    <div class="media-wrap">
+                        <img src="images/pizza_star1.jpg" alt="Pizza Estrella 1" class="pizza-img galeria-item">
+                        <div class="ico-badges">
+                            <img src="images/icon_ball.svg" alt="partido" class="ico-badge">
+                        </div>
+                    </div>
+                    <h3>Pizza Versus Especial</h3>
+                    <p>Ingredientes: pepperoni, arrachera, cebolla caramelizada, mezcla de quesos.</p>
+                </article>
+
+                <article class="pizza-card">
+                    <div class="media-wrap">
+                        <img src="images/pizza_star2.jpg" alt="Pizza Estrella 2" class="pizza-img galeria-item">
+                        <div class="ico-badges">
+                            <img src="images/icon_beer.svg" alt="cerveza" class="ico-badge">
+                        </div>
+                    </div>
+                    <h3>Pizza BBQ & Queso</h3>
+                    <p>Ingredientes: salsa BBQ, pollo deshebrado, tocino crujiente y extra queso cheddar.</p>
+                </article>
+
+                <article class="pizza-card">
+                    <div class="media-wrap">
+                        <img src="images/pizza_star3.jpg" alt="Pizza Estrella 3" class="pizza-img galeria-item">
+                        <div class="ico-badges">
+                            <img src="images/icon_mascot.svg" alt="mascota" class="ico-badge">
+                        </div>
+                    </div>
+                    <h3>Pizza Hawaiana Premium</h3>
+                    <p>Ingredientes: jamón, piña fresca, pimiento y un toque de jalapeño.</p>
+                </article>
+
+                <article class="pizza-card">
+                    <div class="media-wrap">
+                        <img src="images/pizza_star4.jpg" alt="Pizza Estrella 4" class="pizza-img galeria-item">
+                        <div class="ico-badges">
+                            <img src="images/icon_beer.svg" alt="cerveza" class="ico-badge">
+                            <img src="images/icon_ball.svg" alt="partido" class="ico-badge small">
+                        </div>
+                    </div>
+                    <h3>Pizza Vegetariana</h3>
+                    <p>Ingredientes: calabacita, champiñones, pimientos, aceitunas y arúgula fresca.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROMOS -->
+    <section id="promos" class="seccion seccion-clara">
+        <div class="contenedor promos-control">
+            <button type="button" class="btn btn-ver-mas-promos">Ver más promociones</button>
+            <button type="button" class="btn btn-oscuro btn-ver-menos-promos hidden">Ver menos promociones</button>
+        </div>
+    </section>
     <!-- COMBOS LUNES 1 -->
     <section id="combos-lunes" class="seccion">
         <div class="contenedor">
             <h2 class="titulo-seccion">🔥 Promos del Lunes</h2>
             <p class="descripcion-seccion">Los favoritos de la casa al mejor precio. ¡Aprovecha!</p>
-
             <div class="combo-card">
                 <img src="images/comboLunes1.jpeg" alt="Promos del Lunes" class="combo-img">
                 <div class="combo-info">
@@ -588,8 +780,8 @@
             </div>
         </div>
     </section>
-    <!-- COMBOS DOMINGO 3 -->
-    <section id="combos-domingo3" class="seccion seccion-clara">
+    <!-- COMBOS DOMINGO 2 -->
+    <section id="combos-domingo2" class="seccion seccion-clara">
         <div class="contenedor">
             <h2 class="titulo-seccion">🔥 Promos Domingo 2</h2>
             <p class="descripcion-seccion">Más promociones especiales para disfrutar el domingo. ¡Aprovecha!</p>
@@ -624,7 +816,11 @@
             </div>
         </div>
     </section>
-    <!-- JUEGOS -->
+    <div class="contenedor promos-control promos-control-bottom">
+        <button type="button" class="btn btn-oscuro btn-ver-menos-promos hidden">Ver menos promociones</button>
+    </div>
+
+
     <section id="juegos" class="seccion seccion-oscura">
         <div class="contenedor">
             <h2 class="titulo-seccion">🎮 Zona de Juegos</h2>
@@ -642,19 +838,28 @@
                     <span class="icono-juego">⚽</span>
                     <p>Futbolito</p>
                 </div>
+
                 <div class="juego-item">
-                    <span class="icono-juego">🎯</span>
-                    <p>Dardos</p>
+                    <span class="icono-juego">🏒</span>
+                    <p>Air Hockey</p>
+                </div>
+                <div class="juego-item">
+                    <span class="icono-juego">🧱</span>
+                    <p>Jenga</p>
+                </div>
+                <div class="juego-item">
+                    <img src="images/logo_uno.svg" alt="Uno" class="icono-juego" />
+                    <p>Uno</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- UBICACIÓN -->
     <section id="ubicacion" class="seccion seccion-clara">
         <div class="contenedor">
             <h2 class="titulo-seccion">📍 Encuéntranos</h2>
-            <p class="descripcion-seccion">Estamos en el corazón de Zimatalan de Alvarez Calle Hidalgo #22. ¡Te
+            <p class="descripcion-seccion">Estamos en el corazón de Zimatlán de Álvarez, calle Hidalgo No. 24, esquina
+                con Guadalupe Victoria, barrio San Lorenzo. ¡Te
                 esperamos!</p>
             <div class="mapa-contenedor">
                 <iframe
@@ -665,19 +870,42 @@
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer class="footer">
         <div class="contenedor footer-contenido">
             <div class="footer-info">
                 <img src="images/logo_versus.png" alt="Logo" class="footer-logo">
                 <p>Vs Pizza “Versus Pizza”<br>Restaurante Familiar</p>
-                <p>📞 55 1234 5678</p>
-                <p>📧 contacto@versuspizza.com</p>
+                <p class="footer-contacto">
+                    <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp-footer">
+                    <span>+52 951 162 0311</span>
+                </p>
+                <p class="footer-contacto">
+                    <img src="images/whatsapp_109861.png" alt="WhatsApp" class="icono-whatsapp-footer">
+                    <span>+52 951 305 4052</span>
+                </p>
+                <p class="footer-direccion">📍 Calle Hidalgo No. 24, esquina con Guadalupe Victoria, barrio San Lorenzo
+                </p>
                 <p>🕒 Lun–Dom: 15:00 – 23:00</p>
+                <div class="footer-socials">
+                    <p class="footer-social-title">Síguenos en nuestras redes+</p>
+                    <a href="https://www.facebook.com/share/1LmXUF3Lnj/" target="_blank" rel="noopener noreferrer"
+                        class="social-link" aria-label="Facebook">
+                        <img src="images/facebook_109862.ico" alt="Facebook" class="social-icon">
+                    </a>
+                    <a href="https://www.tiktok.com/@pizzasvs?_r=1&_t=ZS-98fiyYbKDtRagrega" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="TikTok">
+                        <img src="images/icons8-tik-tok-50.png" alt="TikTok" class="social-icon">
+                    </a>
+                    <a href="https://www.instagram.com/pizzaversus?igsh=NDN2MjJwN2x1dHIz" target="_blank"
+                        rel="noopener noreferrer" class="social-link" aria-label="Instagram">
+                        <img src="images/instagam_109863.ico" alt="Instagram" class="social-icon">
+                    </a>
+                </div>
             </div>
             <div class="footer-slogan">
                 <p><em>“Sabor y Tradición” – Café, Pizza y Más</em></p>
-                <a href="#combos-lunes" class="btn btn-rojo">Ordene ahora</a>
+                <a href="https://wa.me/529511620311?text=Hola%2C%20quisiera%20hacer%20un%20pedido." target="_blank"
+                    rel="noopener noreferrer" class="btn btn-rojo">Ordene ahora</a>
             </div>
         </div>
         <p class="copy">© 2026 Versus Pizza – Todos los derechos reservados.</p>

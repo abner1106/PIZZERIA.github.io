@@ -51,6 +51,40 @@ body {
     animation: fadeUp 0.8s ease forwards;
 }
 
+/* Wrapper to place an icon/image next to the section title */
+.titulo-con-ico {
+    display: flex;
+    flex-direction: row-reverse;
+    /* show mascot on the right */
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-bottom: 8px;
+}
+
+.titulo-con-ico .titulo-ico {
+    width: 64px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.45);
+    object-fit: contain;
+}
+
+@media (max-width: 700px) {
+    .titulo-con-ico {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .titulo-con-ico .titulo-ico {
+        width: 48px;
+    }
+
+    .titulo-seccion {
+        font-size: 2.2rem;
+    }
+}
+
 .seccion-oscura .titulo-seccion {
     color: #e2ae5a;
 }
@@ -75,6 +109,8 @@ body {
     z-index: 1000;
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(243, 194, 107, 0.2);
+    transition: padding 300ms ease, background-color 300ms ease, box-shadow 300ms ease, transform 300ms ease;
+    will-change: padding, box-shadow;
 }
 
 .nav {
@@ -84,8 +120,8 @@ body {
 }
 
 .logo-img {
-    height: 110px;
-    transition: transform 0.4s ease;
+    height: 90px;
+    transition: transform 300ms ease, height 300ms ease, opacity 300ms ease;
 }
 
 .logo-img:hover {
@@ -134,10 +170,48 @@ body {
     cursor: pointer;
 }
 
+/* Header state when page is scrolled */
+.header.scrolled {
+    padding: 8px 0;
+    background-color: rgba(15, 12, 10, 0.96);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transform: translateZ(0);
+}
+
+.header.scrolled .logo-img {
+    height: 62px;
+}
+
+/* Make nav links feel more refined */
+.nav-links a {
+    transition: color 220ms ease, transform 220ms ease;
+}
+
+.nav-links a:hover {
+    transform: translateY(-3px) scale(1.02);
+}
+
+/* Subtle entrance animation for header */
+.header {
+    animation: headerFade 420ms ease both;
+}
+
+@keyframes headerFade {
+    from {
+        transform: translateY(-6px);
+        opacity: 0.9;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
 /* === HERO === */
 .hero {
-    background: linear-gradient(rgba(20, 17, 15, 0.7), rgba(20, 17, 15, 0.3)), url('images/cafe.jpg') center/cover no-repeat fixed;
-    padding: 160px 20px 120px;
+    background: linear-gradient(rgba(10, 7, 5, 0.85), rgba(10, 7, 5, 0.65)), url('images/pizzaF.jpg') center/cover no-repeat fixed;
+    padding: 60px 20px 90px;
     text-align: center;
     color: #fff;
 }
@@ -147,18 +221,22 @@ body {
     font-size: 4rem;
     margin-bottom: 10px;
     animation: fadeUp 1s ease forwards;
+    text-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
 }
+
 
 .hero-sub {
     font-family: 'Montserrat', sans-serif;
     font-size: 2rem;
     color: #f3c26b;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
 }
 
 .hero-slogan {
     font-size: 1.6rem;
     font-style: italic;
     margin: 20px 0;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
 }
 
 .hero-descripcion {
@@ -168,6 +246,16 @@ body {
     margin-left: auto;
     margin-right: auto;
     color: #d3c9c1;
+    text-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Agranda el logo dentro de la sección hero sin afectar el header */
+.hero .logo-img {
+    width: 220px;
+    max-width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
 }
 
 .btn {
@@ -318,13 +406,65 @@ body {
 
 .producto-img {
     width: 100%;
-    height: 230px;
-    object-fit: cover;
+    height: auto;
+    max-height: 280px;
+    object-fit: contain;
+    display: block;
     transition: transform 0.6s ease;
 }
 
 .producto-card:hover .producto-img {
-    transform: scale(1.1);
+    transform: scale(1.03);
+}
+
+.promo-oculto {
+    display: none !important;
+}
+
+.promos-control {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    margin: 20px auto 30px auto;
+    width: 100%;
+    max-width: 520px;
+}
+
+.promos-control-bottom {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.promos-control .btn-ver-mas-promos,
+.promos-control .btn-ver-menos-promos {
+    margin: 0 auto;
+    min-width: 220px;
+}
+
+.btn-ver-mas-promos {
+    background: #f3c26b;
+    color: #1a1614;
+    border: 1px solid #f3c26b;
+}
+
+.btn-ver-mas-promos:hover {
+    background: #e0b94f;
+}
+
+.btn-ver-menos-promos {
+    background: #444;
+    color: #fff;
+}
+
+.btn-ver-menos-promos:hover {
+    background: #333;
+}
+
+.btn-ver-mas-promos.hidden,
+.btn-ver-menos-promos.hidden {
+    display: none !important;
 }
 
 .producto-card h3 {
@@ -341,13 +481,259 @@ body {
 .producto-card .precio {
     display: inline-block;
     font-weight: 700;
-    color: #f3c26b;
-    font-size: 1.3rem;
-    margin: 15px 0 25px;
-    padding: 5px 15px;
-    border: 1px solid rgba(243, 194, 107, 0.3);
-    border-radius: 20px;
 }
+
+/* ======= NOSOTROS / PROMOCIÓN PIZZAS ======= */
+.nosotros-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 36px;
+    align-items: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.nosotros-text .beneficios-list {
+    list-style: none;
+    margin: 18px auto 22px auto;
+    padding: 0;
+    max-width: 600px;
+}
+
+.beneficios-list li {
+    margin: 8px 0;
+    color: #e9d9c9;
+    text-align: left;
+}
+
+.placeholder-photo {
+    border-radius: 15px;
+    min-height: 300px;
+    background: #2a2420;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #d4c4b6;
+    text-align: center;
+    padding: 18px;
+    font-size: 0.95rem;
+}
+
+/* Imagen principal para la sección Nosotros */
+.nosotros-photo {
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
+    border-radius: 15px;
+    display: block;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.35);
+}
+
+@media (max-width: 900px) {
+    .nosotros-photo {
+        height: 280px;
+    }
+}
+
+@media (max-width: 560px) {
+    .nosotros-photo {
+        height: 200px;
+    }
+}
+
+.mvv-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 32px;
+}
+
+.mvv-card {
+    background: #2a2420;
+    padding: 18px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(243, 194, 107, 0.06);
+}
+
+.quienes-somos {
+    margin-top: 26px;
+    color: #e6d6c8;
+    text-align: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width: 860px) {
+    .nosotros-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .nosotros-media {
+        order: -1;
+    }
+}
+
+/* Mini galería (utiliza mismo estilo que la galería principal pero en versión compacta) */
+.mini-galeria {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 12px;
+}
+
+
+.galeria-item.mini {
+    height: 160px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.28);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.galeria-item.mini:hover {
+    transform: scale(1.03);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.45);
+}
+
+/* Tamaño específico para la imagen CERVEZIN */
+.galeria-item.mini.cervezin {
+    width: 80px;
+    height: auto;
+    max-height: 80px;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    align-self: start;
+}
+
+@media (max-width: 520px) {
+    .galeria-item.mini.cervezin {
+        width: 84px;
+        max-height: 84px;
+    }
+}
+
+.nosotros-breakdown {
+    margin-top: 22px;
+    display: grid;
+    gap: 20px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Estilos específicos dentro de #nosotros: mostrar imágenes completas y aumentar tamaño */
+#nosotros .mini-galeria {
+    justify-items: center;
+    /* centrar imágenes dentro de la mini galería */
+}
+
+#nosotros .galeria-item.mini {
+    object-fit: contain;
+    /* mostrar la imagen completa sin recortar */
+    height: auto;
+    width: auto;
+    max-height: 240px;
+    /* 160 * 1.2 -> 20% más grande en escritorio */
+    display: block;
+    margin: 0 auto;
+}
+
+@media (max-width: 560px) {
+
+    /* En móviles, aumentar ~12% respecto a 120px => ~135px */
+    #nosotros .galeria-item.mini {
+        max-height: 135px;
+    }
+}
+
+/* Variante especial para la mini-galería de envíos: centrar y escalar proporcionalmente */
+#nosotros .mini-galeria.envio {
+    grid-template-columns: 1fr;
+    /* una columna para centrar la imagen */
+    justify-items: center;
+}
+
+#nosotros .mini-galeria.envio .galeria-item.mini {
+    max-width: 230px;
+    /* ligeramente más ancho para destacar el icono/imagen */
+    max-height: 230px;
+    /* mantener proporción y mostrar completa */
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.06);
+    padding: 6px;
+    border-radius: 10px;
+}
+
+#nosotros .mini-galeria:has(> :only-child) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+@media (max-width: 560px) {
+    #nosotros .mini-galeria.envio .galeria-item.mini {
+        max-width: 160px;
+        max-height: 160px;
+        /* móvil ligeramente mayor que la mini normal por visibilidad */
+    }
+}
+
+.break-item h4 {
+    color: #f3c26b;
+    font-size: 1.2rem;
+    margin-bottom: 6px;
+    text-align: center;
+}
+
+.break-item p {
+    color: #d3c9c1;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+@media (max-width: 560px) {
+
+    /* Evitar desbordes en móviles: una columna y ajuste responsivo */
+    #nosotros .mini-galeria {
+        grid-template-columns: 1fr;
+        /* una columna dentro de la sección nosotros */
+        gap: 12px;
+        padding: 0 12px;
+        /* espacio lateral para que no pegue al borde */
+        box-sizing: border-box;
+    }
+
+    /* Mini imágenes en otras secciones mantienen 2 columnas si es necesario */
+    .mini-galeria {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .galeria-item.mini {
+        height: 150px;
+    }
+
+    /* Asegurar que las imágenes dentro de #nosotros no excedan el ancho */
+    #nosotros img {
+        max-width: 100%;
+        height: auto;
+        box-sizing: border-box;
+    }
+
+    /* Evitar márgenes negativos o anchos fijos que causen scroll horizontal */
+    #nosotros .nosotros-grid,
+    #nosotros .nosotros-breakdown {
+        max-width: 100%;
+        padding: 0 12px;
+        box-sizing: border-box;
+    }
+}
+
 
 /* === GALERÍA === */
 .galeria-grid {
@@ -368,6 +754,180 @@ body {
 .galeria-item:hover {
     transform: scale(1.05);
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* === INFO UBICACIÓN (estética) === */
+.info-ubicacion {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+    max-width: 1100px;
+    margin: 18px auto 40px;
+    padding: 8px;
+    align-items: start;
+    opacity: 0;
+    transform: translateY(12px);
+    animation: fadeUp 0.6s ease 0.1s forwards;
+}
+
+.ubicacion-card {
+    background: linear-gradient(180deg, rgba(243, 194, 107, 0.03), rgba(20, 17, 15, 0.18));
+    border: 1px solid rgba(243, 194, 107, 0.12);
+    padding: 18px 20px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+}
+
+.ubicacion-card h3 {
+    color: #f3c26b;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+.ubicacion-card p {
+    color: #e6d6c8;
+    line-height: 1.45;
+    margin: 6px 0;
+}
+
+.ubicacion-card strong {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+/* Ajustes responsivos para la info de ubicación y la galería */
+@media (max-width: 900px) {
+    .info-ubicacion {
+        grid-template-columns: 1fr;
+        padding: 0;
+    }
+
+
+    /* Layout and sizing specifically for the beer mini-galery */
+    .mini-galeria.cervezas-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 18px;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .mini-galeria.cervezas-grid .galeria-item {
+        background: rgba(0, 0, 0, 0.35);
+        padding: 18px;
+        border-radius: 14px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mini-galeria.cervezas-grid .cervezin {
+        width: 88px !important;
+        max-height: 88px !important;
+        object-fit: contain;
+        justify-self: center;
+    }
+
+    @media (max-width: 700px) {
+
+        /* En móviles, mostrar las 3 cervezas en fila y centrar la cervezin */
+        .mini-galeria.cervezas-grid {
+            grid-template-columns: repeat(3, 1fr);
+            gap: 12px;
+        }
+
+        .mini-galeria.cervezas-grid .cervezin {
+            width: 56px !important;
+            max-height: 56px !important;
+            justify-self: center;
+        }
+
+        .mini-galeria.cervezas-grid .galeria-item {
+            min-height: 100px;
+            padding: 12px;
+        }
+    }
+
+    /* Strong overrides to ensure the cerveza image is smaller and not constrained by .galeria-item.mini height */
+    .mini-galeria.cervezas-grid .galeria-item {
+        height: auto !important;
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .mini-galeria.cervezas-grid .galeria-item img {
+        max-width: 100%;
+        height: auto !important;
+    }
+
+    .mini-galeria.cervezas-grid .cervezin {
+        width: 56px !important;
+        max-height: 56px !important;
+        object-fit: contain !important;
+    }
+
+    @media (max-width: 520px) {
+        .mini-galeria.cervezas-grid .cervezin {
+            width: 44px !important;
+            max-height: 44px !important;
+        }
+    }
+
+    .galeria-item {
+        height: 220px;
+    }
+}
+
+@media (max-width: 520px) {
+    .galeria-item {
+        height: 180px;
+    }
+}
+
+/* Force horizontal row for the beer mini-gallery and prevent wrapping */
+.mini-galeria.cervezas-grid {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 18px !important;
+}
+
+.mini-galeria.cervezas-grid .galeria-item {
+    flex: 0 0 auto !important;
+    width: 28% !important;
+    max-width: 260px !important;
+    min-width: 84px !important;
+    height: 220px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.mini-galeria.cervezas-grid .cervezin {
+    width: 64px !important;
+    max-height: 64px !important;
+    margin: 0 auto !important;
+}
+
+@media (max-width: 700px) {
+    .mini-galeria.cervezas-grid {
+        gap: 12px !important;
+    }
+
+    .mini-galeria.cervezas-grid .galeria-item {
+        width: 30% !important;
+        min-width: 80px !important;
+        height: 160px !important;
+    }
+
+    .mini-galeria.cervezas-grid .cervezin {
+        width: 56px !important;
+        max-height: 56px !important;
+    }
 }
 
 /* === JUEGOS === */
@@ -398,6 +958,12 @@ body {
     font-size: 3.5rem;
     display: block;
     margin-bottom: 15px;
+}
+
+img.icono-juego {
+    width: 80px;
+    height: auto;
+    margin: 0 auto 15px;
 }
 
 /* === MAPA === */
@@ -470,8 +1036,76 @@ body {
     margin-bottom: 15px;
 }
 
+.footer-contacto {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.icono-whatsapp-footer {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+/* Icono y texto para envío a domicilio en el footer */
+.footer-envio {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 8px 0;
+    color: #d3c9c1;
+}
+
+.icono-envio-footer {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
 .footer-slogan {
-    text-align: right;
+    text-align: center;
+}
+
+.footer-socials {
+    margin-top: 16px;
+}
+
+.footer-social-title {
+    font-weight: 700;
+    color: #f3c26b;
+    margin-bottom: 8px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    margin-right: 12px;
+    margin-bottom: 8px;
+    border-radius: 50%;
+    background: rgba(243, 194, 107, 0.18);
+    border: 1px solid rgba(243, 194, 107, 0.28);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.45);
+    transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-4px) scale(1.04);
+    background: rgba(243, 194, 107, 0.28);
+    box-shadow: 0 10px 22px rgba(0, 0, 0, 0.55);
+}
+
+.social-icon {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+    display: block;
+    /* mantener colores originales de los iconos (quita el filtro si los iconos son coloreados) */
+    filter: none;
 }
 
 .copy {
@@ -522,6 +1156,105 @@ body {
         flex-direction: column;
         background: rgba(20, 17, 15, 0.98);
         position: absolute;
+
+        /* ===== PIZZAS DESTACADAS ===== */
+        .pizzas-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 24px;
+            margin-top: 20px;
+        }
+
+        .pizza-card {
+            background: #2a2420;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+            border: 1px solid rgba(243, 194, 107, 0.08);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+        }
+
+        .pizza-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
+        }
+
+        .pizza-card h3 {
+            margin: 12px 16px 6px;
+            color: #f3c26b;
+            font-family: 'Playfair Display', serif;
+        }
+
+        .pizza-card p {
+            margin: 0 16px 16px;
+            color: #d3c9c1;
+        }
+
+        .media-wrap {
+            position: relative;
+        }
+
+        .pizza-img {
+            width: 100%;
+            height: 320px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .ico-badges {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .ico-badge {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 6px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.35);
+        }
+
+        .ico-badge.small {
+            width: 34px;
+            height: 34px;
+        }
+
+        /* Make sure gallery & product images are mobile-friendly */
+        .galeria-item,
+        .producto-img,
+        .pizza-img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        @media (min-width: 700px) {
+            .pizza-img {
+                height: 320px;
+            }
+
+            .galeria-item {
+                height: 300px;
+            }
+        }
+
+        @media (max-width: 699px) {
+            .pizza-img {
+                height: 220px;
+            }
+
+            .galeria-item {
+                height: 180px;
+            }
+
+            .producto-img {
+                max-height: 220px;
+            }
+        }
+
         top: 80px;
         left: 0;
         width: 100%;
@@ -603,7 +1336,28 @@ body {
     /* Footer */
     .footer-contenido {
         flex-direction: column;
+        align-items: center;
         text-align: center;
+        gap: 20px;
+    }
+
+    .footer-info,
+    .footer-slogan {
+        width: 100%;
+    }
+
+    .footer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-logo {
+        margin: 0 auto 15px;
+    }
+
+    .footer-contacto {
+        justify-content: center;
     }
 
     .footer-slogan {
@@ -618,4 +1372,21 @@ body {
         min-height: 150px;
         /* Reduce un poco la altura en pantallas muy chicas */
     }
+}
+
+/* Desktop & tablet override: ensure the beer cards don't stack awkwardly and cervezin stays centered */
+.mini-galeria.cervezas-grid .galeria-item {
+    height: 220px !important;
+    min-height: 220px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+.mini-galeria.cervezas-grid .cervezin {
+    width: 72px !important;
+    max-height: 72px !important;
+    justify-self: center;
+    align-self: center;
 }
